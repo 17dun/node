@@ -1,0 +1,35 @@
+{namespace tpl.page}
+/**
+ @param sub_data 轮播数据
+ @param query_src URL 参数
+*/
+{template .lunBo}
+ <div class="hSlider hUI sSlider slider3 " data-role="Slider3">
+     <div class="hSliderView h3D {$sub_data.className}">
+     {if isNonnull($sub_data.data)}
+         <div class="hSliderBelt">
+         {foreach $item in $sub_data.data}
+              <div class="ssLunBoItem">
+              <div wrap="ssLunBoItem" class="ssImgItem tap"
+              data-width="{$item.data_value.width}"
+              data-height="{$item.data_value.height}"
+              style="{if isNonnull($sub_data.ssLunBoItemHeight)}height:{$sub_data.ssLunBoItemHeight}px;{else}background-size:contain!important;{/if}{if isNonnull($sub_data.backgroundSize)}background-size:{$sub_data.backgroundSize};{/if}"
+              {if $item.data_value.href}data-href="?{$query_src}&src={$item.data_value.href|escapeUri}"{/if}
+              /**图片地址URL 正则替换***/
+              {if index($item) < 4 }data-src{else}data-srcd{/if}="{$item.data_value.src}"
+              data-noDel="true">
+
+              </div>
+               <p class="sSliderItemTitle hOmit2 ssImgItemTitle">{if isNonnull($item.data_value.text)}{$item.data_value.text}{/if}</p>
+              </div>
+          {/foreach}
+          </div>
+      {/if}
+     </div>
+     <div class="sliderCtrl">
+       <div class="sliderPrev tap" data-action="sliderPrev"></div>
+       <div class="sliderNum"><span>1</span> / 1</div>
+       <div class="sliderNext tap" data-action="sliderNext"></div>
+     </div>
+ </div>
+{/template}

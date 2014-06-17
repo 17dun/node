@@ -1,0 +1,25 @@
+{namespace tpl.list}
+/**
+ inline 输出
+ @param sub_data 数据
+ @param query_src 前缀地址
+*/
+{template .inline}
+{if isNonnull($sub_data)}
+    {foreach $sub_item in $sub_data}
+        {if isNonnull($sub_item['inlineblock'])}
+        <a class="yi-list-name-br" {if $sub_item.href != '' and $sub_item.href != null }href="?{$query_src}&src={$sub_item.href|escapeUri}"{/if}>
+        {else}
+        <a {if $sub_item.href != '' and $sub_item.href != null}href="?{$query_src}&src={$sub_item.href|escapeUri}"{/if}>
+        {/if}
+        {if isNonnull($sub_item.text) and $sub_item.text != '' }
+        <span {if isNonnull($sub_item['weak'])}class="ssInlineWeak"{/if} >{$sub_item.text}</span>
+        {/if}
+        {if isNonnull($sub_item.src) and $sub_item.text != ''}
+        /**在wide_process.tpl中用inline插件 处理图片地址 {[%$sub_item.src|regex_replace:"/.{1}tpl_size.{1}/":"w50"%]}**/
+         <img data-src="{$sub_item.src}" data-width="{$sub_item.width}" data-height="{$sub_item.height}" />
+        {/if}
+    </a>
+    {/foreach}
+{/if}
+{/template}

@@ -1,0 +1,106 @@
+/**移植normalItem**/
+{namespace tpl.list}
+/**
+ @param parenttype 父模板类型
+ @param sub_data 数据内容
+ @param query_src 链接地址
+*/
+{template .normalItem}
+{if $parenttype == 'GROUPBOX' }
+<ul class="yi-list-ul yi-listdata hList">
+<li class="yi-list-li hListItem hBoxH">
+{/if}
+
+<div class="hListContent hFlex" {if $sub_data['hListContentHeight'] != null }style="height:{$sub_data['hListContentHeight']}px;"{/if} >
+{if isNonnull($sub_data['ITEM_TITLE'])}
+<div class="hListTitle hOmit2 ">
+{foreach $item in $sub_data['ITEM_TITLE']}
+   <p class="{if $item.type == 'INLINE'} ssListItemInLine {/if}">
+	{call tpl.process}
+	    {param item:$item /}
+	    {param query_src:$query_src /}
+	{/call}
+   </p>
+{/foreach}
+</div>
+{/if}
+
+{if isNonnull($sub_data['ITEM_UNDERLINE'])}
+   <div class="hListAttr1 hOmit2 ssListItemUnderLine">
+      {foreach $item in $sub_data['ITEM_UNDERLINE']}
+            <p class="{if $item.type == 'INLINE'} ssListItemInLine {/if}">
+            {if isNonnull($item['data_value']['items'])}
+            {foreach $item_sub in $item['data_value']['items'] }
+
+                    {if $item_sub.href != null and $item_sub.href != '' }<a  href="{$item_sub.href}"> {/if}
+                       {if $item_sub.text != null and $item_sub.text != '' }
+                          <span>{$item_sub.text}</span>
+                       {/if}
+                    {if $item_sub.src != null and  $item_sub.src != ''}
+                        /*TODO 处理图片的正则替换 {[%$item_sub.src|regex_replace:"/.{1}tpl_size.{1}/":"w100"%]}*/
+                        <img data-src="{$item_sub.src}" data-width="{$item_sub.width}" data-height="{$item_sub.height}" style="min-width:{$item_sub.width}px;min-height:{$item_sub.height}px;" />
+                    {/if}
+                   {if $item_sub.href != null and $item_sub.href != '' } </a>  {/if}
+
+             {/foreach}
+             {/if}
+             </p>
+             {ifempty}
+
+      {/foreach}
+   </div>
+ {/if}
+
+{if isNonnull($sub_data['ITEM_CONTENT'])}
+<div class="hListAttr hOmit2">
+{foreach $item in $sub_data['ITEM_CONTENT'] }
+    <p class="{if $item.type == 'INLINE'} ssListItemInLine {/if}">
+	    {call tpl.process}
+    	    {param item:$item /}
+    	    {param query_src:$query_src /}
+    	{/call}
+	</p>
+{/foreach}
+</div>
+{/if}
+
+
+{if isNonnull($sub_data['ITEM_LASTLINE'])}
+   <div class="hListAttr1 hOmit2">
+     {foreach $item in $sub_data['ITEM_LASTLINE'] }
+         <p class="{if $item['type'] == 'INLINE'} ssListItemInLine {/if}">
+          {if isNonnull($item['data_value']['items'])}
+          {foreach $item_sub in $item['data_value']['items']}
+             {if $item_sub.href != null and $item_sub.href != ''}<a  href="{$item_sub.href}">  {/if}
+                  {if $item_sub.text != null and $item_sub.text!='' }
+                    <span> {$item_sub.text} </span>
+                  {/if}
+                  {if $item_sub.src != null and $item_sub.src !=''}
+                    /**TODO {[%$item_sub.src|regex_replace:"/.{1}tpl_size.{1}/":"w100"%]}**/
+                     <img data-src="{$item_sub.src}" data-width="{$item_sub.width}" data-height="{$item_sub.height}" style="min-width:{$item_sub.width}px;min-height:{$item_sub.height}px;" />
+                   {/if}
+              {if $item_sub.href != null and $item_sub.href != '' } </a> {/if}
+
+          {/foreach}
+          {/if}
+          </p>
+     {/foreach}
+ </div>
+{/if}
+
+</div>
+
+/**TODO 处理插件 getImageRealHight($sub_data.ITEM_IMG,78)**/
+{if isNonnull($sub_data['ITEM_IMG'])}
+    <a style="{if $sub_data['ITEM_IMG']['showHeight']}height:{$sub_data['ITEM_IMG']['showHeight']}px;{if $sub_data['ITEM_IMG']['showHeight']>98}background-size:contain!important;{/if}{/if}{if $sub_data['ITEM_IMG']['resizeMinHeight']==true}min-height:20px;{/if}" class="hListImg {if isNonnull($sub_data['ITEM_IMG']['className'])}{$sub_data['ITEM_IMG']['className']}{/if}"
+    {if $sub_data['ITEM_IMG']['img_href']}href="?{$query_src}&src={$sub_data['ITEM_IMG']['img_href']|escapeUri}"{/if}
+    /**TODO 处理 imgSrc {$sub_data['ITEM_IMG']['src']|regex_replace:"/.{1}tpl_size.{1}/":"w156"%]}**/
+    data-src="{$sub_data['ITEM_IMG']['src']}" data-height="{$sub_data['ITEM_IMG'].height}" data-width="{$sub_data['ITEM_IMG'].width}" >
+	</a>
+{/if}
+
+{if $parenttype == 'GROUPBOX'}
+</li>
+</ul>
+{/if}
+{/template}

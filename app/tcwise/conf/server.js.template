@@ -1,0 +1,40 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: miaoyichan
+ * Date: 13-8-30
+ * Time: 下午4:04
+ * To change this template use File | Settings | File Templates.
+ */
+module.exports = {
+    'silkserver' : [
+	<$
+	FOREACH i IN silkserver_ip.split(',');
+		" {'host':'" ;i;"','port':8851},\n";
+		END;
+	-$>
+    ],
+    'appdb' : [
+	       <$
+	        FOREACH i IN appdb_ip.split(',');
+                " {'host':'" ;i;"','port':4180},\n";
+                END;
+        -$>
+
+    ],
+    'sitename': [
+	       <$
+        FOREACH i IN sitename_ip.split(',');
+                " {'host':'" ;i;"','port':5357},\n";
+                END;
+        -$>
+    ],
+    'siteua': [
+	       <$
+        FOREACH i IN siteua_ip.split(',');
+                " {'host':'" ;i;"','port':5357},\n";
+                END;
+        -$>
+
+    ]
+
+}

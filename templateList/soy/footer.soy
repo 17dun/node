@@ -1,0 +1,22 @@
+{namespace tpl}
+/**
+ * 短链接模板
+ * @param sub_data
+ */
+{template .footer}
+    <div class="saFooter">
+    	<div class="saFooterOld">
+    		<a class="toolbar-pcPageUrl-light yi-www" href="{$sub_data['redirectURL']}&type=pcURLBottom&src={$sub_data.src|escapeUri}&mask={$sub_data['mask']}">
+    		    <span>电脑版</span>
+    		</a>
+    		<a class="toolbar-goBack-light yi-www" href="#"><span>回顶部</span></a>	
+    	</div>
+    	<div class="saFooterNew"> 
+    	<a target="_blank" class="yi-www" href="{$sub_data['transPageRoleURL']}">转码声明</a>
+        <a target="_blank" class="yi-www" href="{$sub_data['userFeedBackURL']}">用户反馈</a>
+    	{if $sub_data['showClaim']}
+        <a target="_blank" class="yi-www"  href="{$sub_data['redirectURL']}&type=pcWebSiteCallBack&src={($sub_data['pcWebSiteAdminCallBackURL']+$sub_data['hostClaim'])|escapeUri}&mask={$sub_data['mask2']}">站长认领</a>
+        {/if}
+    	</div>
+    </div>
+{/template}

@@ -1,0 +1,55 @@
+{namespace tpl}
+/**
+ * TODO 不能采用多个字段输出，不便于压缩工具压缩
+ * @param hiddenInputs
+ * @param searchForm
+ * @param select  
+ * @param searchBox 
+ * @param searchButton
+ */
+{template .topSearch}
+
+   <form action="{$searchForm['action']}" method="{$searchForm['method']}" class="{$searchForm['class']}  {if $searchButton and $searchButton.length >1} ssSearchFormMultiButton{/if}" onsubmit="ssSubmitForm(this);return false;">
+     //hidden 字段
+     {if isNonnull($hiddenInputs)}
+     <div>
+      {foreach $hidden in $hiddenInputs}
+      		{$hidden|noAutoescape}
+      {/foreach}
+     </div>
+     {/if}
+     <div class="saSearchViewContainer">
+       //select 选择
+       {if $select != null and $select['options'].length >0}
+       {if $select['options'].length > 1}
+       <div class="ssSelect">
+       <select name="{$select['tc_name']}">
+            {if isNonnull($select['options'])}
+       		{foreach $option in $select['options']}
+       			<option  tc_id="{$option['id']}" value="{if $option['value']}{$option['value']}{else}{index($option)}{/if}" {if $option['tc_name']}tc_name="{$option['tc_name']}"{/if} {if $option['selected'] or $option['checked'] }selected{/if}>{$option['text']|noAutoescape}</option>
+       			{ifempty}
+       		{/foreach}
+       		{/if}
+       </select>
+       </div>
+       {elseif $select['options'].length == 1}
+            <div class="ssLabel">
+                {$select['options'][0].text|noAutoescape}
+                <input type="hidden" name="{$select['options'][0]['name']}" tc_name="{$select['options'][0]['tc_name']}" value="{$select['options'][0].value}">
+            </div>
+       {else}
+       {/if}
+       {/if}
+       //输入框
+       <input type="text"
+       {if $searchBox['placeholder'] != null and $searchBox['placeholder'] != '' }placeholder="{$searchBox['placeholder']}"{/if}
+       {if $searchBox.name}name="{$searchBox.name}"{/if} {if $searchBox['tc_name']}tc_name="{$searchBox['tc_name']}"{/if} {if $searchBox.value != null and $searchBox.value != ''}value='{$searchBox.value}'{/if} />
+       //提交按钮
+       {foreach $btn in $searchButton}
+            <input type="submit" {if $btn.name}name="{$btn.name}"{/if} {if $btn['tc_name']}tc_name="{$btn['tc_name']}"{/if} tc_id="{$btn['id']}" {if $btn.text or $btn.value}value="{$btn.text or $btn.value}"{else}value=""{/if} id="{$btn['id']}" {if $btn['background_image']}data-src="{$btn['background_image']|noAutoescape}"{/if} class="{if $btn['background_image']}ssSearchFormNoBG{/if} {if $btn.text and $btn.text.length >=3 }ssFormBtnSmallSize{/if}"/>
+       {ifempty}
+       {/foreach}
+         //<input type="submit" {if $searchButton[0].name}name="{$searchButton[0].name}"{/if} {if $searchButton[0].tc_name}tc_name="{$searchButton[0].tc_name}"{/if} tc_id="{$searchButton[0].id}" {if $searchButton[0].text or $searchButton[0].vale}value="{$searchButton[0].text or $searchButton[0].value}"{else}value=""{/if} id="{$searchButton[0].id}" {if $searchButton[0]['background_image']}style="background-image:url({$searchButton[0]['background_image']|noAutoescape});" class="ssSearchFormNoBG"{/if}/>
+     </div>
+   </form>
+{/template}

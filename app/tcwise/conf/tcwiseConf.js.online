@@ -1,0 +1,83 @@
+var server = require('./server')
+    ,yingji = require('./yingji.js')
+    ,ad_server = require('./adSite');
+module.exports = {
+    'app_name' :'tcwise',
+    'env':'production',//[ production, development]
+    'server':{
+    'port'  : 8501
+    },
+    'static':{
+        'RunEnv': 1,  // 1 for online, 0 for offline
+        'OfflinePath': 'http://tudeju.fe.baidu.com/node-tcwise-static',
+    },
+    'global' : {
+        'httpAgentMaxSocks' : 30000
+    },
+    'cluster' : {
+       'enable' : true
+    },
+    'silkserver' : {
+        'backend' : server.silkserver,
+        'path' : '/webapp?structpage=1',
+        'method' : 'GET',
+        'headers' : {
+            'Host' : 'internal_wise_domain.baidu.com'
+        },
+        'appid' :406936,
+        'retry' : -1,//retry must less than backend.length-1
+        'timeout' : 30000
+    },
+    'sitename': {
+        'backend': server.sitename,
+        'timeout': 100,
+        'code' : 'gbk'
+    },
+    'siteua': {
+        'backend': server.siteua,
+        'timeout': 100
+    },
+    'bdlog' : {
+        'path' : './log/tcwise.log',
+        'maxLength' : 3000,
+        'level' : 3, // [ 1-debug, 2-trace, 3-notice, 4-warn, 5-fatal ]
+        'printTty' : false,
+        'printFile' : true
+    },
+    'appdb' : {
+        'backend' : server.appdb,
+        'user' : 'wise_appdb_w',
+        'password' : 'C4u7Y6z2M3o5',
+        'database' : 'mcloud',
+        'timeout' : 100,
+    },
+    'qs' : {
+        'method' : 'GET',
+        'hostname' : 'muadmin.baidu.com',
+        'path' : '/api/getSiteAppInfo.html?domain=',
+        'port' : 80,
+        'timeout' : 100
+    },
+    'jsmartier' : {
+        prefix : '{[%',
+        suffix : '%]}',
+        configPath : './template/conf/',
+        monitorInterval : 180000,
+        legacy : true
+    },
+    'video' : {
+        hostname:'cybertran.baidu.com',
+        path : '/video/trans.mp4?',
+        method: 'GET',
+        timeout : 100
+    },
+    'show_page_ad' : 1,
+    'yingji' : yingji,
+    'xdebug':{
+            showXdebugPATH:false,
+            __id:0,
+            pvCount:0
+        }
+}
+
+

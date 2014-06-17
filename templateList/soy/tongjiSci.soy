@@ -1,0 +1,15 @@
+{namespace tongji}
+/**
+ * @param xData
+ * @param yData
+ * @param xPath
+ * @param yPath
+ */
+{template .imageList}
+ x=csvRead('{$xPath}');
+ y=csvRead('{$yPath}');
+ scf(0);
+ plot(x(1:1,1:{length($xData)}),y(1:1,1:{length($yData)}),'kx');
+ xs2jpg(0,'siteApp.jpg');
+ exit;
+{/template}

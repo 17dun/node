@@ -1,0 +1,5 @@
+
+http://10.46.192.34:8008/ssid=0/from=0/bd_page_type=1/uid=3234F275ADAACCCCEBC73932584BFA5A/pu=sz%401320_2001%2Cta%40iphone_1_5.0_3_534%2Cusm%400/baiduid=43EF1056BAC25D4F886D149098230B81/w=0_10_http%3A%2F%2Fwww.chinaz.com%2Fnews%2F2013%2F0906%2F316519.shtml/t=iphone/l=3/tc?ref=www_iphone&lid=11789089570876699778&order=1&vit=osres&tj=www_normal_1_0_10&m=8&srd=1&cltj=cloud_title&dict=22&sec=32644&di=03c40c8dc8a5c3b6&bdenc=1&src=http://cm.chinaz.com/go.php
+http://10.46.192.34:8008/l=3/tc?ref=www_iphone&lid=11789089570876699778&order=1&vit=osres&tj=www_normal_1_0_10&m=8&srd=1&cltj=cloud_title&dict=22&sec=32644&di=03c40c8dc8a5c3b6&bdenc=1&src=http://cm.chinaz.com/go.php
+
+http://10.46.192.34:8008/l=3/?src=http://www.dajiazhao.com

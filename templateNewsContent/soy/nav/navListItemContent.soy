@@ -1,0 +1,21 @@
+{namespace tpl.nav}
+/**
+ 有二级菜单的展示
+ @param sub_data 列表数据
+*/
+{template .navListItemContent}
+<li class="hListItem">
+
+	<a class="tap" data-action="navListShowMore"
+	{if ($sub_data['text'] == null or $sub_data['text'] == '' ) and ($sub_data['src'] != null and $sub_data['src'] !='') }
+	    /**TODO 图片地址正则替换 |regex_replace:"/.{1}tpl_size.{1}/g":"b640_640"*/
+	    data-src="{$sub_data['src']}"
+	    {/if}
+	    ><span>{$sub_data['text']|noAutoescape}</span></a>
+	<div class="navListContent hide">
+		{call tpl.fastLink}
+		    {param  sub_data:$sub_data['data']['data_value']/}
+		{/call}
+	</div>
+</li>
+{/template}

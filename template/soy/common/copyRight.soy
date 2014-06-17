@@ -1,0 +1,12 @@
+{namespace tpl.common}
+/**
+ * 短链接模板
+ * @param sub_data
+ */
+{template .copyRight}
+    {if isNonnull($sub_data)}
+    	{call tpl.common.card}
+    	    {param sub_data:$sub_data /}
+    	{/call}
+    {/if}
+{/template}

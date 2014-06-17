@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="node_modules/express/node_modules/mkdirp/test/|node_modules/express/node_modules/connect/node_modules/pause/|node_modules/mocha/node_modules/ms/test/|node_modules/mocha/|node_modules/express/node_modules/connect/node_modules/formidable/test/standalone/|app/tcwise/controller/|node_modules/nshead/node_modules/bufferpack/node_modules/should/lib/|node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/system/|node_modules/express/node_modules/fresh/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/lib/interfaces/|node_modules/mocha/node_modules/glob/|node_modules/mocha/node_modules/mkdirp/examples/|app/tcwise/test/|node_modules/express/lib/router/|node_modules/mocha/node_modules/ms/|node_modules/express/node_modules/connect/lib/|node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/commander/|node_modules/mysql/node_modules/bignumber.js/perf/|node_modules/mocha/node_modules/glob/test/|node_modules/mysql/test/integration/connection/|node_modules/mocha/node_modules/glob/node_modules/graceful-fs/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/lib/browser/|node_modules/mocha/node_modules/glob/node_modules/inherits/|node_modules/cpredata/|node_modules/iconv-lite/test/|node_modules/express/node_modules/connect/node_modules/formidable/|node_modules/mocha/node_modules/debug/example/|app/tcwise/models/dao/|node_modules/express/node_modules/methods/|node_modules/mysql/test/integration/pool/|node_modules/express/node_modules/connect/node_modules/formidable/test/unit/|node_modules/mysql/node_modules/require-all/test/mydir/sub/|app/tcwise/router/|node_modules/mysql/tool/|node_modules/jsmartier/|node_modules/iconv-lite/|node_modules/mocha/node_modules/jade/node_modules/mkdirp/|node_modules/mysql/lib/protocol/constants/|app/tcwise/conf/|node_modules/iconv-lite/encodings/|node_modules/express/node_modules/connect/node_modules/qs/|node_modules/express/node_modules/connect/node_modules/uid2/|app/tcwise/node_modules/predata/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/debug/lib/|app/tcwise/models/|node_modules/mysql/lib/protocol/sequences/|app/tcwise/app/|node_modules/mocha/node_modules/glob/node_modules/graceful-fs/test/|node_modules/express/node_modules/cookie/|node_modules/comlib/|node_modules/mocha/node_modules/mkdirp/test/|node_modules/iconv-lite/generation/|app/tcwise/models/logic/|node_modules/nshead/node_modules/bufferpack/node_modules/should/test/|node_modules/express/node_modules/connect/node_modules/formidable/example/|node_modules/mocha/node_modules/mkdirp/|node_modules/mysql/node_modules/require-all/test/controllers/|node_modules/express/lib/|node_modules/mocha/node_modules/jade/|node_modules/express/node_modules/send/node_modules/mime/|node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/|node_modules/nshead/node_modules/bufferpack/|node_modules/mocha/node_modules/ms/test/support/|node_modules/mysql/node_modules/bignumber.js/perf/lib/bigdecimal_GWT/|node_modules/express/node_modules/commander/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/|node_modules/express/node_modules/connect/node_modules/formidable/tool/|node_modules/mocha/lib/browser/|node_modules/mysql/node_modules/require-all/test/mydir/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/commander/lib/|node_modules/express/node_modules/connect/node_modules/formidable/test/fixture/js/|node_modules/mocha/node_modules/commander/lib/|node_modules/mocha/node_modules/jade/node_modules/mkdirp/examples/|node_modules/express/node_modules/cookie-signature/|app/tcwise/demo/|node_modules/mocha/node_modules/debug/|node_modules/mocha/lib/reporters/|node_modules/express/node_modules/connect/node_modules/formidable/benchmark/|node_modules/mysql/test/unit/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/lib/|node_modules/mocha/node_modules/jade/lib/|node_modules/mysql/test/unit/protocol/|node_modules/mocha/lib/|node_modules/mocha/node_modules/jade/testing/|node_modules/express/node_modules/connect/node_modules/formidable/lib/|node_modules/mocha/node_modules/jade/lib/nodes/|node_modules/mocha/node_modules/glob/examples/|node_modules/mocha/node_modules/diff/|node_modules/express/node_modules/buffer-crc32/|node_modules/mocha/node_modules/diff/test/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/debug/example/|node_modules/express/node_modules/send/|node_modules/express/|node_modules/express/node_modules/connect/node_modules/formidable/test/|node_modules/netnshead/|node_modules/express/node_modules/connect/node_modules/formidable/test/integration/|node_modules/express/node_modules/debug/example/|node_modules/mocha/node_modules/glob/node_modules/minimatch/|node_modules/express/node_modules/connect/node_modules/formidable/test/fixture/|node_modules/iconv-lite/encodings/table/|node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/simple/|node_modules/mocha/node_modules/commander/|node_modules/mysql/|node_modules/mocha/node_modules/growl/lib/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/growl/lib/|node_modules/mocha/lib/interfaces/|node_modules/express/node_modules/debug/|node_modules/mocha/node_modules/jade/node_modules/mkdirp/test/|node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/integration/|node_modules/mysql/lib/protocol/packets/|node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/|node_modules/express/node_modules/mkdirp/|node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/sigmund/|node_modules/express/node_modules/connect/lib/middleware/|node_modules/mysql/node_modules/bignumber.js/|node_modules/mysql/lib/|node_modules/nshead/|node_modules/mocha/node_modules/glob/node_modules/minimatch/test/|node_modules/mcpack/|node_modules/express/node_modules/cookie/test/|node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/|node_modules/mysql/node_modules/require-all/test/|node_modules/mocha/node_modules/debug/lib/|node_modules/express/node_modules/debug/lib/|node_modules/express/node_modules/range-parser/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/growl/|node_modules/mysql/node_modules/bignumber.js/test/|node_modules/express/node_modules/buffer-crc32/tests/|node_modules/mysql/node_modules/bignumber.js/perf/lib/bigdecimal_ICU4J/|node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/sigmund/test/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/lib/reporters/|node_modules/mysql/test/|node_modules/express/node_modules/mkdirp/examples/|node_modules/mysql/lib/protocol/|node_modules/mocha/node_modules/growl/|node_modules/nshead/node_modules/bufferpack/node_modules/should/examples/|node_modules/express/node_modules/connect/node_modules/bytes/|node_modules/express/node_modules/connect/|node_modules/mysql/benchmark/|node_modules/express/node_modules/connect/lib/middleware/session/|node_modules/nshead/node_modules/bufferpack/node_modules/should/|node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/debug/|node_modules/express/node_modules/send/lib/|node_modules/mysql/node_modules/require-all/|node_modules/express/node_modules/commander/node_modules/keypress/" kind="src" path=""/>
+	<classpathentry kind="src" path="app/tcwise/app"/>
+	<classpathentry kind="src" path="app/tcwise/conf"/>
+	<classpathentry kind="src" path="app/tcwise/controller"/>
+	<classpathentry kind="src" path="app/tcwise/demo"/>
+	<classpathentry excluding="dao/|logic/" kind="src" path="app/tcwise/models"/>
+	<classpathentry kind="src" path="app/tcwise/models/dao"/>
+	<classpathentry kind="src" path="app/tcwise/models/logic"/>
+	<classpathentry kind="src" path="app/tcwise/node_modules/predata"/>
+	<classpathentry kind="src" path="app/tcwise/router"/>
+	<classpathentry kind="src" path="app/tcwise/test"/>
+	<classpathentry kind="src" path="node_modules/comlib"/>
+	<classpathentry kind="src" path="node_modules/cpredata"/>
+	<classpathentry excluding="node_modules/mkdirp/test/|node_modules/connect/node_modules/pause/|node_modules/connect/node_modules/formidable/test/standalone/|node_modules/connect/node_modules/formidable/test/legacy/system/|node_modules/fresh/|lib/router/|node_modules/connect/lib/|node_modules/connect/node_modules/formidable/|node_modules/methods/|node_modules/connect/node_modules/formidable/test/unit/|node_modules/connect/node_modules/qs/|node_modules/connect/node_modules/uid2/|node_modules/cookie/|node_modules/connect/node_modules/formidable/example/|lib/|node_modules/send/node_modules/mime/|node_modules/commander/|node_modules/connect/node_modules/formidable/tool/|node_modules/connect/node_modules/formidable/test/fixture/js/|node_modules/cookie-signature/|node_modules/connect/node_modules/formidable/benchmark/|node_modules/connect/node_modules/formidable/lib/|node_modules/buffer-crc32/|node_modules/send/|node_modules/connect/node_modules/formidable/test/|node_modules/connect/node_modules/formidable/test/integration/|node_modules/debug/example/|node_modules/connect/node_modules/formidable/test/fixture/|node_modules/connect/node_modules/formidable/test/legacy/simple/|node_modules/debug/|node_modules/connect/node_modules/formidable/test/legacy/integration/|node_modules/mkdirp/|node_modules/connect/lib/middleware/|node_modules/cookie/test/|node_modules/connect/node_modules/formidable/test/legacy/|node_modules/debug/lib/|node_modules/range-parser/|node_modules/buffer-crc32/tests/|node_modules/mkdirp/examples/|node_modules/connect/node_modules/bytes/|node_modules/connect/|node_modules/connect/lib/middleware/session/|node_modules/send/lib/|node_modules/commander/node_modules/keypress/" kind="src" path="node_modules/express"/>
+	<classpathentry excluding="router/" kind="src" path="node_modules/express/lib"/>
+	<classpathentry kind="src" path="node_modules/express/lib/router"/>
+	<classpathentry excluding="tests/" kind="src" path="node_modules/express/node_modules/buffer-crc32"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/buffer-crc32/tests"/>
+	<classpathentry excluding="node_modules/keypress/" kind="src" path="node_modules/express/node_modules/commander"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/commander/node_modules/keypress"/>
+	<classpathentry excluding="node_modules/pause/|node_modules/formidable/test/standalone/|node_modules/formidable/test/legacy/system/|lib/|node_modules/formidable/|node_modules/formidable/test/unit/|node_modules/qs/|node_modules/uid2/|node_modules/formidable/example/|node_modules/formidable/tool/|node_modules/formidable/test/fixture/js/|node_modules/formidable/benchmark/|node_modules/formidable/lib/|node_modules/formidable/test/|node_modules/formidable/test/integration/|node_modules/formidable/test/fixture/|node_modules/formidable/test/legacy/simple/|node_modules/formidable/test/legacy/integration/|lib/middleware/|node_modules/formidable/test/legacy/|node_modules/bytes/|lib/middleware/session/" kind="src" path="node_modules/express/node_modules/connect"/>
+	<classpathentry excluding="middleware/|middleware/session/" kind="src" path="node_modules/express/node_modules/connect/lib"/>
+	<classpathentry excluding="session/" kind="src" path="node_modules/express/node_modules/connect/lib/middleware"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/lib/middleware/session"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/bytes"/>
+	<classpathentry excluding="test/standalone/|test/legacy/system/|test/unit/|example/|tool/|test/fixture/js/|benchmark/|lib/|test/|test/integration/|test/fixture/|test/legacy/simple/|test/legacy/integration/|test/legacy/" kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/benchmark"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/example"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/lib"/>
+	<classpathentry excluding="standalone/|legacy/system/|unit/|fixture/js/|integration/|fixture/|legacy/simple/|legacy/integration/|legacy/" kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test"/>
+	<classpathentry excluding="js/" kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/fixture"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/fixture/js"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/integration"/>
+	<classpathentry excluding="system/|simple/|integration/" kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/legacy"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/integration"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/simple"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/legacy/system"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/standalone"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/test/unit"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/formidable/tool"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/pause"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/qs"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/connect/node_modules/uid2"/>
+	<classpathentry excluding="test/" kind="src" path="node_modules/express/node_modules/cookie"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/cookie-signature"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/cookie/test"/>
+	<classpathentry excluding="example/|lib/" kind="src" path="node_modules/express/node_modules/debug"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/debug/example"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/debug/lib"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/fresh"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/methods"/>
+	<classpathentry excluding="test/|examples/" kind="src" path="node_modules/express/node_modules/mkdirp"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/mkdirp/examples"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/mkdirp/test"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/range-parser"/>
+	<classpathentry excluding="node_modules/mime/|lib/" kind="src" path="node_modules/express/node_modules/send"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/send/lib"/>
+	<classpathentry kind="src" path="node_modules/express/node_modules/send/node_modules/mime"/>
+	<classpathentry excluding="test/|encodings/|generation/|encodings/table/" kind="src" path="node_modules/iconv-lite"/>
+	<classpathentry excluding="table/" kind="src" path="node_modules/iconv-lite/encodings"/>
+	<classpathentry kind="src" path="node_modules/iconv-lite/encodings/table"/>
+	<classpathentry kind="src" path="node_modules/iconv-lite/generation"/>
+	<classpathentry kind="src" path="node_modules/iconv-lite/test"/>
+	<classpathentry kind="src" path="node_modules/jsmartier"/>
+	<classpathentry kind="src" path="node_modules/mcpack"/>
+	<classpathentry excluding="node_modules/ms/test/|node_modules/glob/|node_modules/mkdirp/examples/|node_modules/ms/|node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/|node_modules/glob/test/|node_modules/glob/node_modules/graceful-fs/|node_modules/glob/node_modules/inherits/|node_modules/debug/example/|node_modules/jade/node_modules/mkdirp/|node_modules/glob/node_modules/graceful-fs/test/|node_modules/mkdirp/test/|node_modules/mkdirp/|node_modules/jade/|node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/|node_modules/ms/test/support/|lib/browser/|node_modules/commander/lib/|node_modules/jade/node_modules/mkdirp/examples/|node_modules/debug/|lib/reporters/|node_modules/jade/lib/|lib/|node_modules/jade/testing/|node_modules/jade/lib/nodes/|node_modules/glob/examples/|node_modules/diff/|node_modules/diff/test/|node_modules/glob/node_modules/minimatch/|node_modules/commander/|node_modules/growl/lib/|lib/interfaces/|node_modules/jade/node_modules/mkdirp/test/|node_modules/glob/node_modules/minimatch/node_modules/lru-cache/|node_modules/glob/node_modules/minimatch/node_modules/sigmund/|node_modules/glob/node_modules/minimatch/test/|node_modules/debug/lib/|node_modules/glob/node_modules/minimatch/node_modules/sigmund/test/|node_modules/growl/" kind="src" path="node_modules/mocha"/>
+	<classpathentry excluding="browser/|reporters/|interfaces/" kind="src" path="node_modules/mocha/lib"/>
+	<classpathentry kind="src" path="node_modules/mocha/lib/browser"/>
+	<classpathentry kind="src" path="node_modules/mocha/lib/interfaces"/>
+	<classpathentry kind="src" path="node_modules/mocha/lib/reporters"/>
+	<classpathentry excluding="lib/" kind="src" path="node_modules/mocha/node_modules/commander"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/commander/lib"/>
+	<classpathentry excluding="example/|lib/" kind="src" path="node_modules/mocha/node_modules/debug"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/debug/example"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/debug/lib"/>
+	<classpathentry excluding="test/" kind="src" path="node_modules/mocha/node_modules/diff"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/diff/test"/>
+	<classpathentry excluding="node_modules/minimatch/node_modules/lru-cache/test/|test/|node_modules/graceful-fs/|node_modules/inherits/|node_modules/graceful-fs/test/|node_modules/minimatch/node_modules/lru-cache/lib/|examples/|node_modules/minimatch/|node_modules/minimatch/node_modules/lru-cache/|node_modules/minimatch/node_modules/sigmund/|node_modules/minimatch/test/|node_modules/minimatch/node_modules/sigmund/test/" kind="src" path="node_modules/mocha/node_modules/glob"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/glob/examples"/>
+	<classpathentry excluding="test/" kind="src" path="node_modules/mocha/node_modules/glob/node_modules/graceful-fs"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/glob/node_modules/graceful-fs/test"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/glob/node_modules/inherits"/>
+	<classpathentry excluding="node_modules/lru-cache/test/|node_modules/lru-cache/lib/|node_modules/lru-cache/|node_modules/sigmund/|test/|node_modules/sigmund/test/" kind="src" path="node_modules/mocha/node_modules/glob/node_modules/minimatch"/>
+	<classpathentry excluding="test/|lib/" kind="src" path="node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test"/>
+	<classpathentry excluding="test/" kind="src" path="node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/sigmund"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/sigmund/test"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/glob/node_modules/minimatch/test"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/glob/test"/>
+	<classpathentry excluding="lib/" kind="src" path="node_modules/mocha/node_modules/growl"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/growl/lib"/>
+	<classpathentry excluding="node_modules/mkdirp/|node_modules/mkdirp/examples/|lib/|testing/|lib/nodes/|node_modules/mkdirp/test/" kind="src" path="node_modules/mocha/node_modules/jade"/>
+	<classpathentry excluding="nodes/" kind="src" path="node_modules/mocha/node_modules/jade/lib"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/jade/lib/nodes"/>
+	<classpathentry excluding="examples/|test/" kind="src" path="node_modules/mocha/node_modules/jade/node_modules/mkdirp"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/jade/node_modules/mkdirp/examples"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/jade/node_modules/mkdirp/test"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/jade/testing"/>
+	<classpathentry excluding="examples/|test/" kind="src" path="node_modules/mocha/node_modules/mkdirp"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/mkdirp/examples"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/mkdirp/test"/>
+	<classpathentry excluding="test/|test/support/" kind="src" path="node_modules/mocha/node_modules/ms"/>
+	<classpathentry excluding="support/" kind="src" path="node_modules/mocha/node_modules/ms/test"/>
+	<classpathentry kind="src" path="node_modules/mocha/node_modules/ms/test/support"/>
+	<classpathentry excluding="node_modules/bignumber.js/perf/|test/integration/connection/|test/integration/pool/|node_modules/require-all/test/mydir/sub/|tool/|lib/protocol/constants/|lib/protocol/sequences/|node_modules/require-all/test/controllers/|node_modules/bignumber.js/perf/lib/bigdecimal_GWT/|node_modules/require-all/test/mydir/|test/unit/|test/unit/protocol/|lib/protocol/packets/|node_modules/bignumber.js/|lib/|node_modules/require-all/test/|node_modules/bignumber.js/test/|node_modules/bignumber.js/perf/lib/bigdecimal_ICU4J/|test/|lib/protocol/|benchmark/|node_modules/require-all/" kind="src" path="node_modules/mysql"/>
+	<classpathentry kind="src" path="node_modules/mysql/benchmark"/>
+	<classpathentry excluding="protocol/constants/|protocol/sequences/|protocol/packets/|protocol/" kind="src" path="node_modules/mysql/lib"/>
+	<classpathentry excluding="constants/|sequences/|packets/" kind="src" path="node_modules/mysql/lib/protocol"/>
+	<classpathentry kind="src" path="node_modules/mysql/lib/protocol/constants"/>
+	<classpathentry kind="src" path="node_modules/mysql/lib/protocol/packets"/>
+	<classpathentry kind="src" path="node_modules/mysql/lib/protocol/sequences"/>
+	<classpathentry excluding="perf/|perf/lib/bigdecimal_GWT/|test/|perf/lib/bigdecimal_ICU4J/" kind="src" path="node_modules/mysql/node_modules/bignumber.js"/>
+	<classpathentry excluding="lib/bigdecimal_GWT/|lib/bigdecimal_ICU4J/" kind="src" path="node_modules/mysql/node_modules/bignumber.js/perf"/>
+	<classpathentry kind="src" path="node_modules/mysql/node_modules/bignumber.js/perf/lib/bigdecimal_GWT"/>
+	<classpathentry kind="src" path="node_modules/mysql/node_modules/bignumber.js/perf/lib/bigdecimal_ICU4J"/>
+	<classpathentry kind="src" path="node_modules/mysql/node_modules/bignumber.js/test"/>
+	<classpathentry excluding="test/mydir/sub/|test/controllers/|test/mydir/|test/" kind="src" path="node_modules/mysql/node_modules/require-all"/>
+	<classpathentry excluding="mydir/sub/|controllers/|mydir/" kind="src" path="node_modules/mysql/node_modules/require-all/test"/>
+	<classpathentry kind="src" path="node_modules/mysql/node_modules/require-all/test/controllers"/>
+	<classpathentry excluding="sub/" kind="src" path="node_modules/mysql/node_modules/require-all/test/mydir"/>
+	<classpathentry kind="src" path="node_modules/mysql/node_modules/require-all/test/mydir/sub"/>
+	<classpathentry excluding="integration/connection/|integration/pool/|unit/|unit/protocol/" kind="src" path="node_modules/mysql/test"/>
+	<classpathentry kind="src" path="node_modules/mysql/test/integration/connection"/>
+	<classpathentry kind="src" path="node_modules/mysql/test/integration/pool"/>
+	<classpathentry excluding="protocol/" kind="src" path="node_modules/mysql/test/unit"/>
+	<classpathentry kind="src" path="node_modules/mysql/test/unit/protocol"/>
+	<classpathentry kind="src" path="node_modules/mysql/tool"/>
+	<classpathentry kind="src" path="node_modules/netnshead"/>
+	<classpathentry excluding="node_modules/bufferpack/node_modules/should/lib/|node_modules/bufferpack/node_modules/mocha/lib/interfaces/|node_modules/bufferpack/node_modules/mocha/node_modules/commander/|node_modules/bufferpack/node_modules/mocha/lib/browser/|node_modules/bufferpack/node_modules/mocha/node_modules/debug/lib/|node_modules/bufferpack/node_modules/should/test/|node_modules/bufferpack/|node_modules/bufferpack/node_modules/mocha/|node_modules/bufferpack/node_modules/mocha/node_modules/commander/lib/|node_modules/bufferpack/node_modules/mocha/lib/|node_modules/bufferpack/node_modules/mocha/node_modules/debug/example/|node_modules/bufferpack/node_modules/mocha/node_modules/growl/lib/|node_modules/bufferpack/node_modules/mocha/node_modules/growl/|node_modules/bufferpack/node_modules/mocha/lib/reporters/|node_modules/bufferpack/node_modules/should/examples/|node_modules/bufferpack/node_modules/should/|node_modules/bufferpack/node_modules/mocha/node_modules/debug/" kind="src" path="node_modules/nshead"/>
+	<classpathentry excluding="node_modules/should/lib/|node_modules/mocha/lib/interfaces/|node_modules/mocha/node_modules/commander/|node_modules/mocha/lib/browser/|node_modules/mocha/node_modules/debug/lib/|node_modules/should/test/|node_modules/mocha/|node_modules/mocha/node_modules/commander/lib/|node_modules/mocha/lib/|node_modules/mocha/node_modules/debug/example/|node_modules/mocha/node_modules/growl/lib/|node_modules/mocha/node_modules/growl/|node_modules/mocha/lib/reporters/|node_modules/should/examples/|node_modules/should/|node_modules/mocha/node_modules/debug/" kind="src" path="node_modules/nshead/node_modules/bufferpack"/>
+	<classpathentry excluding="lib/interfaces/|node_modules/commander/|lib/browser/|node_modules/debug/lib/|node_modules/commander/lib/|lib/|node_modules/debug/example/|node_modules/growl/lib/|node_modules/growl/|lib/reporters/|node_modules/debug/" kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha"/>
+	<classpathentry excluding="interfaces/|browser/|reporters/" kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/lib"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/lib/browser"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/lib/interfaces"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/lib/reporters"/>
+	<classpathentry excluding="lib/" kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/commander"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/commander/lib"/>
+	<classpathentry excluding="lib/|example/" kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/debug"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/debug/example"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/debug/lib"/>
+	<classpathentry excluding="lib/" kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/growl"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/mocha/node_modules/growl/lib"/>
+	<classpathentry excluding="lib/|test/|examples/" kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/should"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/should/examples"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/should/lib"/>
+	<classpathentry kind="src" path="node_modules/nshead/node_modules/bufferpack/node_modules/should/test"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

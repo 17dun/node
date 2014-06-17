@@ -1,0 +1,77 @@
+{namespace tpl}
+/**
+ * 短链接模板
+ * @param item
+ * @param query_src
+ * @param parenttype
+ * @param isHide
+ */
+{template .process}
+    {if $item.type == 'ATOM'}
+        {if $isHide}
+            <div data-tpl-name="tpl/list/atom" data-tpl-data-name="sub_data" data-tpl-data-external-query_src="{$query_src}">
+                <!--{$item['dataStr']|noAutoescape}-->
+            </div>
+        {else}
+            {call tpl.list.atom}
+                {param sub_data:$item /}
+                {param query_src:$query_src /}
+            {/call}
+        {/if}
+    {elseif $item.type == 'INLINE'}
+        {if $isHide}
+            <div data-tpl-name="tpl/list/inline" data-tpl-data-name="sub_data" data-tpl-data-external-query_src="{$query_src}">
+                <!--{$item['data_value']['dataStr']|noAutoescape}-->
+            </div>
+        {else}
+            {call tpl.list.inline}
+                {param sub_data:$item['data_value']['items'] /}
+                {param query_src:$query_src /}
+            {/call}
+        {/if}
+    {elseif $item.type == 'LINK'}
+        {call tpl.list.link}
+            {param sub_data:$item['data_value'] /}
+        {/call}
+    {elseif $item.type == 'TEXT' or $item.type == 'TITLE'}
+        {if $item['func_type'] == 'TITLE'}
+            {call tpl.text_title}
+                {param sub_data:$item['data_value'] /}
+            {/call}
+        {else}
+            {call tpl.list.text}
+                {param sub_data:$item['data_value'] /}
+            {/call}
+        {/if}
+    {elseif $item.type == 'FAST_LINK'}
+        {call tpl.fastLink}
+            {param sub_data:$item['data_value'] /}
+        {/call}
+    {elseif $item.type == 'IMAGE_ATOM'}
+        {if $isHide}
+            <div data-tpl-name="tpl/list/normalItem" data-tpl-data-name="sub_data" data-tpl-data-external-query_src="{$query_src}">
+                <!--{$item['dataStr']|noAutoescape}-->
+            </div>
+        {else}
+            {call tpl.list.normalItem}
+                {param sub_data:$item /}
+                {param query_src:$query_src /}
+                {param parenttype:$parenttype /}
+            {/call}
+        {/if}
+    {elseif $item.type == 'TABLE_LIST_ITEM'}
+        {if $isHide}
+            <div data-tpl-name="tpl/tableList/item" data-tpl-data-name="item">
+                <!--{$item['dataStr']|noAutoescape}-->
+            </div>
+        {else}
+            {call tpl.tableList.item}
+                {param item:$item /}
+            {/call}
+        {/if}
+    {elseif $item.type == 'COPY_RIGHT'}
+        {call tpl.common.copyRightContent}
+            {param sub_data:$item['data_value'] /}
+        {/call}
+    {/if}
+{/template}

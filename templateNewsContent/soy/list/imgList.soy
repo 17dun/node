@@ -1,0 +1,29 @@
+{namespace tpl.list}
+/**
+    @param sub_data 图片列表数据
+    @param blockcontrol 块面积控制
+    @param query_src 前缀地址
+*/
+{template .imgList}
+<div class="yi-imglist1-wrap  s-clear image-news">
+{if isNonnull($sub_data['data'])}
+    <ul class="h-list h-list1 {$sub_data['className']} ssImgList" {if length($sub_data['data'])>6 } style="height:{$sub_data['containerHeightSSImgList']}px" {/if}>
+        {foreach $item in $sub_data['data']}
+    	<li class="h-list1-item ssImgItem {if length($sub_data['data'])>6 and index($item)>3 and ($blockcontrol == 0 or $blockcontrol == 1)} noDis {/if}"  data-width="{$item['data_value'].width}" data-height="{$item['data_value'].height}">
+        <a  {if $item['data_value']['href'] != null and $item['data_value']['href'] != ''}href="?{$query_src}&src={$item['data_value']['href']|escapeUri}"{/if}>
+                    /**转换图拍呢地址[%$item.tImgSrc|regex_replace:"/.{1}tpl_size.{1}/g":"b640_640"%]**/
+                    <div wrap="ssImgItem" class="ssImgListImg" data-src="{$item['tImgSrc']}"  style="height:{$sub_data['ssImgListItemHeight']}px;
+                    {if $sub_data['backgroundSize'] != null and $sub_data['backgroundSize'] != '' }background-size:{$sub_data['backgroundSize']};{/if}"></div>
+                {if $item['data_value']['text'] != null and $item['data_value']['text'] != ''}
+                <span class="img-title hOmit{$sub_data['maxTextRowCount']}">{$item['data_value']['text']|noAutoescape}</span>
+                {/if}
+            </a>
+    	</li>
+        {/foreach}
+    </ul>
+{/if}
+{if length($sub_data['data'])>6 and ($blockcontrol == 0 or $blockcontrol == 1)}
+    <div class="hShowMoreItem showMoreImg tap" data-action="down" data-tj="imgListShowMoreBtn"><span>点击加载更多</span></div>
+{/if}
+</div>
+{/template}

@@ -1,0 +1,19 @@
+{namespace tpl.nav}
+/**
+ 没有二级栏目的展示
+ @param sub_data 条目内容
+*/
+{template .navListItemLink}
+    <li class="hListItem">
+    	{if $sub_data['text'] !=null and $sub_data['text'] !=''}
+    	    <a href="{$sub_data.href}">
+    	        <span>{$sub_data['text']|noAutoescape}</span>
+    	    </a>
+    	{else}
+    	    /**TODO 图片地址正则替换   |regex_replace:"/.{1}tpl_size.{1}/g":"b640_640"  **/
+    	    <a href="{$sub_data.href}" data-src="{$sub_data.src}">
+    		    <span></span>
+    	    </a>
+    	{/if}
+    </li>
+{/template}

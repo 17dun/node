@@ -1,0 +1,26 @@
+{namespace tpl.tableList}
+/**
+ @param item 数据元素
+ @paramd title 元素数据的具体内容
+ @paramd body 主体元素
+ @paramd stress 强调信息
+**/
+{template .item}
+  <div class="hListContent hFlex">
+        {if $item.title}
+            <div class="hListTitle hOmit2 ">{if $item.title['subtitle'] != null and $item.title['subtitle'] != ''}<span class="ssKey">{$item.title['subtitle']}:</span>{/if}<span class="ssValue">{$item.title['subcontent']|noAutoescape}</span></div>
+        {/if}
+        {if $item.body}
+            {call .keyValue}
+                {param data:$item.body /}
+            {/call}
+        {/if}
+   </div>
+   {if $item.stress}
+        <div class="hListItemRight ssTableListItemStress">
+            <div class="hListImg  ssListItemUnderLine">{$item['stress']['subcontent']|noAutoescape}</div>
+            <div class="ssTableListStreeTitle hListAttr">{$item['stress']['subtitle']}</div>
+        </div>
+   {/if}
+
+{/template}

@@ -1,0 +1,36 @@
+{namespace tpl.list}
+/**
+ * 短链接模板
+ * @param sub_data
+ * @param query_src
+ */
+{template .atom}
+
+	<div class="hListContent hFlex">
+    {if isNonnull($sub_data['data_value']['links'])}
+		<div class="hListTitle hOmit2">
+			<p class="{if $sub_data.type == 'INLINE'} ssListItemInLine {/if}">
+				{foreach $sub_item in $sub_data['data_value']['links']}
+				{if $sub_item.href}
+				<a href="?{$query_src}&src={$sub_item.href|escapeUri}">{$sub_item.text}</a>
+				{/if}
+				{/foreach}
+			</p>
+		</div>
+    {/if}
+    {if isNonnull($sub_data['data_value']['summary'])}
+		<div class="hListAttr hOmit3">{$sub_data['data_value']['summary'] }</div>
+    {/if}
+	</div>
+
+	{if isNonnull($sub_data['data_value']['src'])}
+		{if isNonnull($sub_data['data_value']['img_href'])}
+        <a href="?{$query_src}&src={$sub_data['data_value']['img_href']|escapeUri}">
+			<span style="{if isNonnull($sub_data['data_value']['showHeight'])}height:{$sub_data['data_value']['showHeight']}px;{if $sub_data['data_value']['showHeight']>98}background-size:contain!important;{/if}{/if}" data-src="{$sub_data['data_value']['src']}" class="hListImg {if isNonnull($sub_data['data_value']['className'])}{$sub_data['data_value']['className']}{/if}" data-height="{$sub_data['data_value']['height']}" data-width="{$sub_data['data_value']['width']}" ></span>
+		</a>
+		{else}
+        <div style="{if isNonnull($sub_data['data_value']['showHeight'])}height:{$sub_data['data_value']['showHeight']}px;{if $sub_data['data_value']['showHeight']>98}background-size:contain!important;{/if}{/if}" class="hListImg {if isNonnull($sub_data['data_value']['className'])}{$sub_data['data_value']['className']}{/if}" data-src="{$sub_data['data_value']['src']}" data-height="{$sub_data['data_value']['height']}" data-width="{$sub_data['data_value']['width']}"></div>
+		{/if}
+	{/if}
+
+{/template}

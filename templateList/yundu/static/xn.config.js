@@ -1,0 +1,2 @@
+var xn={},require,define;require=xn.use=function(){for(var b=[],a=0,c=arguments.length;a<c;a++)b.push(arguments[a]);xn._cache_use.push(b)};define=xn.create=function(){var b=[];if(3>arguments.length)console.error("\u5728\u9875\u9762\u4e0a\u4f7f\u7528define \u53c2\u6570\u4e0d\u80fd\u5c11\u4e8e3\u4e2a\uff0c\u4e0d\u80fd\u7f3a\u5c11 module name");else{for(var a=0,c=arguments.length;a<c;a++)b.push(arguments[a]);xn._cache_create.push(b)}};xn._cache_use=[];xn._cache_create=[];window.xn=xn;
+window.require=require;window.define=define;

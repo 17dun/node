@@ -1,0 +1,26 @@
+{namespace tpl}
+/**
+ * 短链接模板
+ * @param sub_data
+ */
+{template .fastLink}
+{if isNonnull($sub_data)}
+    <div class="saFastLink">
+    {foreach $item in $sub_data}
+    {if $item and ($item.text != null or $item.src != null)}
+    {if index($item)%3==0 }
+        <div class="saFastLinkRow">
+    {/if}
+    {if $item.href}
+            <a href="{$item.href}" class="" {if ($item.text == null or $item.text == '' ) and $item.src != null }data-src="{$item.src}"{/if} >
+               {if $item.text}{$item.text|noAutoescape}{else}&nbsp;{/if}
+            </a>
+    {/if}
+    {if index($item) == ($sub_data.length-1) or index($item)%3 == 2}
+        </div>
+    {/if}
+    {/if}
+    {/foreach}
+    </div>
+{/if}
+{/template}

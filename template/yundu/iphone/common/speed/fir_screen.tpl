@@ -1,0 +1,1 @@
+<script type="text/javascript">window.PDC && PDC.first_screen && PDC.first_screen();</script>

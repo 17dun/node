@@ -1,0 +1,64 @@
+{namespace tpl.list}
+/**
+ * 短链接模板
+ * @param sub_data
+ * @param query_src
+ */
+{template .index}
+    <div class="ssListContainer {if $sub_data['split'] == 1} yi-split-div{/if}">
+    {if isNonnull($sub_data['data_value']['items'])}
+    	<ul class="yi-list-ul hList{if $sub_data['split'] == 1} yi-split-ul{/if}">
+        {foreach $item in $sub_data['data_value']['items']}
+    		{if $item['type'] == 'ATOM'}
+    		<li class="yi-list-li  yi-list-atom hBoxH hListItem {if isNonnull($item['isNoDis'])}{$item['isNoDis']}{/if}" data-type="img-text-list">
+                {if isNonnull($item['isNoDis'])}
+                    {call tpl.process}
+                        {param isHide:true /}
+                        {param item:$item/}
+                        {param query_src:$query_src /}
+                    {/call}
+                {else}
+                    {call tpl.process}
+                        {param item:$item/}
+                        {param query_src:$query_src /}
+                    {/call}
+                {/if}
+        	</li>
+    		{elseif $item['type'] == 'LINK'}
+    		<li class="yi-list-li yi-list-link hListItem {if isNonnull($item['isNoDis'])}{$item['isNoDis']}{/if}" data-type="text-list">
+                <a class="yi-list-name yi-hover" href="?{$query_src}&src={$item['data_value']['href']|escapeUri}">
+                    {$item['data_value']['text']}
+                </a>
+            </li>
+            {elseif $item['type'] == 'INLINE'}
+            <li class="yi-list-li yi-list-inline hListItem {if isNonnull($item['isNoDis'])}{$item['isNoDis']}{/if}" data-type="text-list">
+                <div class="yi-list-name {if $item['align_right'] != null}ssInLineAlignRight{/if}">
+                {if isNonnull($item['isNoDis'])}
+                    {call tpl.process}
+                        {param isHide:true /}
+                        {param item:$item/}
+                        {param query_src:$query_src /}
+                    {/call}
+                {else}
+                    {call tpl.process}
+                        {param item:$item/}
+                        {param query_src:$query_src /}
+                    {/call}
+                {/if}
+                </div>
+            </li>
+    		{elseif $item['type'] == 'TEXT'}
+    		<li class="yi-list-li yi-list-inline hListItem {if $item['bold_text'] == '1'}yi-list-text-bold{/if} {if $sub_data['split'] == 1}yi-split-text{/if} {if isNonnull($item['isNoDis'])}{$item['isNoDis']}{/if}" data-type="text-list">
+                {call tpl.process}
+                    {param item:$item/}
+                {/call}
+            </li>
+    		{/if}
+    	{/foreach}
+    	</ul>
+    {/if}
+    {if length($sub_data['data_value']['items']) > $sub_data['data_value']['showCount']+4 and $sub_data['data_value']['showCount'] >0 and ($sub_data['data_value']['items'][length($sub_data['data_value']['items'])-1]['isNoDis'])}
+       <div class="hShowMoreItem tap" data-action="showMoreListItem" {if $sub_data['data_value']['showConfig'] }data-showConfig="{$sub_data['data_value']['showConfig']}"{/if}><span>点击加载更多</span></div>
+    {/if}
+    </div>
+{/template}

@@ -1,0 +1,14 @@
+{namespace tpl.tableList}
+/**
+ @param data 数据
+ */
+{template .keyValue}
+{if isNonnull($data)}
+ <div class="hListAttr ssKeyValue">
+  {foreach $item in $data}
+     <div>{if $item['key'] != null and $item['key'] != ''}<span class="ssKey">{$item['key']}:</span>{/if}<span class="ssValue">{$item['value']|noAutoescape}</span></div>
+     {ifempty}
+  {/foreach}
+  </div>
+{/if}
+{/template}

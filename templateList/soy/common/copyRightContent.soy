@@ -1,0 +1,52 @@
+{namespace tpl.common}
+/**
+ * 短链接模板
+ * @param sub_data
+ */
+{template .copyRightContent}
+    {if isNonnull($sub_data)}
+    <ul class="hList saCopyRight">
+    {if isNonnull($sub_data['cr'])}
+    {foreach $item in $sub_data['cr']}
+    <li class="hListItem">
+    	<div class="saCopyRightRight  hListTitle">
+    	    {if $item['key'] != ''}<p>{$item['key']}</p>{/if}
+    	    <p><a {if isNonnull($item['link']) }href="{$item['link']}"{/if}>{$item['text']}</a></p>
+    	</div>
+    </li>
+    {/foreach}
+    {/if}
+    
+    {if isNonnull($sub_data['contact'])}
+    {foreach $item in $sub_data['contact']}
+    <li class="hListItem">
+    {$item['key']}:<a {if isNonnull($item['link']) }href="{$item['link']}"{/if}>{$item['text']}</a>
+    </li>
+    {/foreach}
+    {/if}
+    
+    
+    {if isNonnull($sub_data['record'])}
+    <li class="hListItem saCopyRightRecord">
+    	{foreach $item in $sub_data['record']}
+    		<a class="hListAttr" {if isNonnull($item['link'])}href="{$item['link']}" {/if}>{$item['text']}</a>
+    	{/foreach}
+    </li>
+    {/if}
+    
+    {if isNonnull($sub_data['friendLink'])}
+    <li class="hListItem saCopyRightFriendLink noDis">
+        {call tpl.fastLink}
+            {param sub_data:$sub_data['friendLink'] /}
+        {/call}
+    </li>
+    {/if}
+    </ul>
+    {if isNonnull($sub_data['friendLink'])}
+    <div class="yi-load-more">
+         <a>查看更多</a>
+    </div>
+    {/if}
+    {/if}
+
+{/template}

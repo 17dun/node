@@ -1,0 +1,21 @@
+{namespace tpl}
+/**
+ * @paramd search
+ * @paramd hotWords
+ * @param item 元素
+ */
+{template .navSearch}
+      {if $item['search'] != null}
+      <div class="hCard saNavSearchBoxStruct">
+           {call .topSearch data="$item['search']"}
+           {/call}
+      </div>
+      {/if}
+      {if $item['hotWords'] != null and $item['hotWords'].length >0 }
+        <div class="hCard">
+               {call .fastLink}
+                  {param sub_data:$item['hotWords'] /}
+               {/call}
+         </div>
+      {/if}
+{/template}

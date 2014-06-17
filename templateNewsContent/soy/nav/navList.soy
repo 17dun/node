@@ -1,0 +1,114 @@
+{namespace tpl.nav}
+/**
+ 导航组件迁移，之后异步渲染
+ @param sub_data 导航数据
+**/
+{template .navList}
+
+{if isNonnull($sub_data['navListSed']) and length($sub_data['navListSed'])>0}
+    <div class="saNavCard">
+        {foreach $sedItem in $sub_data['navListSed']}
+            {if $sedItem['hasSub'] == 0}
+                <div class="hCard">
+                    {call tpl.fastLink}
+                        {param sub_data:$sedItem['data_value'] /}
+                    {/call}
+                </div>
+            {else}
+                <div class="hCard">
+                    <ul class="hList navList">
+                        {foreach $item in $sub_data['navListSed']}
+                            {if isNonnull($item['data'])}
+                                {call .navListItemContent}
+                                    {param sub_data:$item/}
+                                {/call}
+                            {else}
+                                {call .navListItemLink}
+                                    {param sub_data:$item/}
+                                {/call}
+                            {/if}
+                        {/foreach}
+                    </ul>
+                </div>
+            {/if}
+        {/foreach}
+
+        {if length($sub_data['navList']) > 0 }
+            {if $sub_data['navListHasSub'] == 0}
+                <div class="hCard">
+                    {call tpl.fastLink}
+                        {param sub_data:$sub_data['navList'] /}
+                    {/call}
+                </div>
+            {else}
+                <div class="hCard">
+                    <ul class="hList navList">
+                        {foreach $item in $sub_data['navList']}
+                            {if isNonnull($item['data'])}
+                                {call .navListItemContent}
+                                    {param sub_data:$item/}
+                                {/call}
+                            {else}
+                                {call .navListItemLink}
+                                    {param sub_data:$item/}
+                                {/call}
+                            {/if}
+                        {/foreach}
+                    </ul>
+                </div>
+            {/if}
+        {/if}
+
+    </div>
+{/if}
+{if isNonnull($sub_data['navList']) and length($sub_data['navList']) > 0 }
+    {if $sub_data['navListHasSub'] == 0}
+        <div class="hCard saNavCard">
+            {call tpl.fastLink }
+                {param sub_data:$sub_data['navList'] /}
+            {/call}
+        </div>
+    {else}
+        <div class="hCard">
+            <ul class="hList navList">
+                {foreach $item in $sub_data['navList']}
+                    {if isNonnull($item['data'])}
+                        {call .navListItemContent}
+                            {param sub_data:$item/}
+                        {/call}
+                    {else}
+                        {call .navListItemLink}
+                            {param sub_data:$item/}
+                        {/call}
+                    {/if}
+                {/foreach}
+            </ul>
+        </div>
+    {/if}
+{/if}
+{if isNonnull($sub_data['mainNavList']) and length($sub_data['mainNavList']) > 0 }
+    {if $sub_data['mainNavListHasSub'] == 0}
+        <div class="hCard saNavCard">
+            {call tpl.fastLink}
+                {param sub_data:$sub_data['mainNavList']/}
+            {/call}
+        </div>
+    {else}
+        <div class="hCard">
+            <ul class="hList navList">
+                {foreach $item in $sub_data['mainNavList']}
+                    {if isNonnull($item['data'])}
+                        {call .navListItemContent}
+                            {param sub_data:$item/}
+                        {/call}
+                    {else}
+                        {call .navListItemLink}
+                            {param sub_data:$item/}
+                        {/call}
+                    {/if}
+                {/foreach}
+            </ul>
+        </div>
+    {/if}
+{/if}
+{/template}

@@ -1,0 +1,22 @@
+{namespace tpl.common}
+/**
+ * 短链接模板
+ * @param sub_data
+ */
+{template .card}
+    <div class="hCard siteInfo">
+       {if isNonnull($sub_data['title'])}
+          <div class="hCardTop">
+    	    {call tpl.common.cardTitle}
+    	        {param sub_data:$sub_data /}
+    	    {/call}
+          </div>
+       {/if}
+       
+       {if isNonnull($sub_data['data'])}
+         {call tpl.process}
+            {param item:$sub_data['data'] /}
+         {/call}
+       {/if}
+    </div>
+{/template}

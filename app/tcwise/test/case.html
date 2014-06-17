@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <title>tcwise case</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+     <script type="text/javascript" src="case.js"></script>
+</head>
+<body>
+<h1>case</h1>
+<a href="
+http://172.22.132.162/transcoder/ImageDiffPlatform/bin/image_diff.php" target="_blank">词表比较页面 </a>
+<a href="http://10.46.192.34:8700/debug?port=5858" target="_blank">node-inspector </a>
+<div>
+<p>mocha命令</p>
+    <p>rm -rf app/tcwise-cov rm -f coverage.html</p>
+    <p>jscoverage --no-highlight  --encoding=UTF-8 app/tcwise app/tcwise-cov</p>
+<p>SUMERU_COV=1 mocha app/tcwise/test -t 30000 --reporter html-cov > coverage.html</p>
+</div>
+<div>
+    <p>http://mcouiui.newoffline.bae.baidu.com/projects/siteappSearch/demo/testcase.html</p>
+</div>
+<table border="1">
+    <tr>
+        <th>url</th>
+        <th>测试机</th>
+        <th>测试机xdebug</th>
+        <th>测试机tc_source</th>
+        <th>线上</th>
+        <th>线上xdebug</th>
+        <th>线上tc_source</th>
+
+    </tr>
+    <tr>
+        <td>http://novel.feiku.com/218422/12820</td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_%E7%94%B5%E5%AD%90%E4%B9%A6/t=iphone/l=3/tc?baiduid=5C3D9DF23F1D41049D85FE9F62797F25&srd=1&dict=21&src=http%3A%2F%2Fnovel.feiku.com%2F218422%2F12820
+" target="_blank">normal page test</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_%E7%94%B5%E5%AD%90%E4%B9%A6/t=iphone/l=3/tc?baiduid=5C3D9DF23F1D41049D85FE9F62797F25&srd=1&dict=21&src=http%3A%2F%2Fnovel.feiku.com%2F218422%2F12820
+" target="_blank">normal page online</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_%E7%94%B5%E5%AD%90%E4%B9%A6/t=iphone/l=3/tc?baiduid=5C3D9DF23F1D41049D85FE9F62797F25&srd=1&dict=21&xdebug=1&src=http%3A%2F%2Fnovel.feiku.com%2F218422%2F12820
+" target="_blank">online xdebug</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_%E7%94%B5%E5%AD%90%E4%B9%A6/t=iphone/l=3/tc?baiduid=5C3D9DF23F1D41049D85FE9F62797F25&srd=1&dict=21&tc_source=1&src=http%3A%2F%2Fnovel.feiku.com%2F218422%2F12820
+" target="_blank">online tc_source=1</a></td>
+    </tr>
+    <tr>
+        <td><a href="http://www.diyifanwen.com/qitafanwen/duhougan/index_6.htm">http://www.diyifanwen.com/qitafanwen/duhougan/index_6.htm</a></td>
+        <td><a href="http://10.46.192.34:8501/l=3/a?dict=22&order=3&src=http://www.diyifanwen.com/qitafanwen/duhougan/index_6.htm">测试机</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="http://m.baidu.com/ssid=0/from=0/bd_page_type=1/uid=3234F275ADAACCCCEBC73932584BFA5A/pu=sz%401320_2001%2Cta%40iphone_1_5.0_3_534%2Cusm%400/baiduid=43EF1056BAC25D4F886D149098230B81/w=0_10_http%3A%2F%2Fwww.diyifanwen.com%2Fqitafanwen%2Fduhougan%2Findex_6.htm/t=iphone/l=3/tc?ref=www_iphone&lid=18162870682563491249&order=1&vit=osres&tj=www_normal_1_0_10&m=8&srd=1&cltj=cloud_title&dict=22&sec=32667&di=08960ac137bb3b04&bdenc=1&nsrc=DobW0QEptyoA_yixCFOxXnANedT62v3IEQGG_ypR3z3snE3kffqlItdnJ7HNQX_CIk4sunW0fwoDliDeRzdjjcEZu_9SejNrjjWGce_kxsi">dict=22跳转到源网页</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="http://cm.chinaz.com/go.php">http://cm.chinaz.com/go.php</a></td>
+        <td><a href="http://10.46.192.34:8501/ssid=0/from=0/bd_page_type=1/uid=3234F275ADAACCCCEBC73932584BFA5A/pu=sz%401320_2001%2Cta%40iphone_1_5.0_3_534%2Cusm%400/baiduid=43EF1056BAC25D4F886D149098230B81/w=0_10_http%3A%2F%2Fwww.chinaz.com%2Fnews%2F2013%2F0906%2F316519.shtml/t=iphone/l=3/tc?ref=www_iphone&lid=11789089570876699778&order=1&vit=osres&tj=www_normal_1_0_10&m=8&srd=1&cltj=cloud_title&dict=22&sec=32644&di=03c40c8dc8a5c3b6&bdenc=1&src=http://cm.chinaz.com/go.php
+">测试机</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="http://m.baidu.com/ssid=0/from=0/bd_page_type=1/uid=3234F275ADAACCCCEBC73932584BFA5A/pu=sz%401320_2001%2Cta%40iphone_1_5.0_3_534%2Cusm%400/baiduid=43EF1056BAC25D4F886D149098230B81/w=0_10_http%3A%2F%2Fwww.chinaz.com%2Fnews%2F2013%2F0906%2F316519.shtml/t=iphone/l=3/tc?ref=www_iphone&lid=11789089570876699778&order=1&vit=osres&tj=www_normal_1_0_10&m=8&srd=1&cltj=cloud_title&dict=22&sec=32644&di=03c40c8dc8a5c3b6&bdenc=1&src=http://cm.chinaz.com/go.php
+">跳转到siteapp站点 case2 online</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="http://www.dajiazhao.com">http://www.dajiazhao.com</a></td>
+        <td><a href="http://10.46.192.34:8501/ssid=0/from=0/bd_page_type=1/uid=3234F275ADAACCCCEBC73932584BFA5A/pu=sz%401320_2001%2Cta%40iphone_1_5.0_3_534%2Cusm%400/baiduid=43EF1056BAC25D4F886D149098230B81/w=0_10_http%3A%2F%2Fwww.dajiazhao.com/t=iphone/l=3/tc?ref=www_iphone&lid=6869195197829284070&order=1&vit=osres&tj=www_normal_1_0_10&m=8&srd=1&cltj=cloud_title&dict=21&sec=32667&di=643aac3c78b3e45c&bdenc=1&src=http://www.dajiazhao.com">测试机</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="http://m.baidu.com/ssid=0/from=0/bd_page_type=1/uid=3234F275ADAACCCCEBC73932584BFA5A/pu=sz%401320_2001%2Cta%40iphone_1_5.0_3_534%2Cusm%400/baiduid=43EF1056BAC25D4F886D149098230B81/w=0_10_http%3A%2F%2Fwww.dajiazhao.com/t=iphone/l=3/tc?ref=www_iphone&lid=6869195197829284070&order=1&vit=osres&tj=www_normal_1_0_10&m=8&srd=1&cltj=cloud_title&dict=21&sec=32667&di=643aac3c78b3e45c&bdenc=1&nsrc=HZ0S0wEptyoA_yixCFOxXnANedT62v3IEQGG_ypZ_D3vl5W7h0rgHtkfEFW">sitename online</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="http://novel.feiku.com/Free">http://novel.feiku.com/Free</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_%E7%94%B5%E5%AD%90%E4%B9%A6/t=iphone/l=3/tc?baiduid=5C3D9DF23F1D41049D85FE9F62797F25&srd=1&dict=21&src=http%3A%2F%2Fnovel.feiku.com%2FFree">测试机</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_%E7%94%B5%E5%AD%90%E4%B9%A6/t=iphone/l=3/tc?srd=1&dict=21&src=http%3A%2F%2Fnovel.feiku.com%2FFree" target="_blank">线上</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_%E7%94%B5%E5%AD%90%E4%B9%A6/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Ffeiku.com" target="_blank">feiku.com</td>
+        <td></td>
+        <td></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_%E7%94%B5%E5%AD%90%E4%B9%A6/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Ffeiku.com" target="_blank">页面曾经失败</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>http://detail.zol.com.cn/cell_phone_index/subcate57_171_list_1500_s4300_1_1_0_1.html</td>
+        <td><a href="http://10.46.192.34:8501/l=3/tc?srd=1&dict=20&nocache=1&src=http%3A%2F%2Fdetail.zol.com.cn%2Fcell_phone_index%2Fsubcate57_171_list_1500_s4300_1_1_0_1.html" target="_blank">表单提交</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="http://m.baidu.com/l=3/tc?srd=1&dict=20&nocache=1&src=http%3A%2F%2Fdetail.zol.com.cn%2Fcell_phone_index%2Fsubcate57_171_list_1500_s4300_1_1_0_1.html" target="_blank">表单提交</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>http://www.3lian.com</td>
+        <td><a href="http://10.46.192.34:8501/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.3lian.com" target="_blank">线下</a></td>
+        <td><a href="http://10.46.192.34:8501/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.3lian.com&xdebug=1" target="_blank">线下xdebug</a></td>
+        <td><a href="http://10.46.192.34:8501/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.3lian.com&tc_source=1" target="_blank">线下</a></td>
+        <td><a href="http://m.baidu.com/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.3lian.com" target="_blank">自定义标注</a></td>
+        <td><a href="http://m.baidu.com/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.3lian.com&xdebug=1" target="_blank">自定义标注</a></td>
+        <td><a href="http://m.baidu.com/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.3lian.com&tc_source=1" target="_blank">自定义标注</a></td>
+    </tr>
+    <tr>
+        <td>音频</td>
+        <td><a href="http://10.46.192.34:8501/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.51t.com/ting/0a7b19a9/6118042b/" target="_blank">线下</a></td>
+        <td><a href="http://10.46.192.34:8501/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.51t.com/ting/0a7b19a9/6118042b/&xdebug=1" target="_blank">线下xdebug</a></td>
+        <td><a href="http://10.46.192.34:8501/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.51t.com/ting/0a7b19a9/6118042b/&tc_source=1" target="_blank">线下</a></td>
+        <td><a href="http://m.baidu.com/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.51t.com/ting/0a7b19a9/6118042b/" target="_blank">自定义标注</a></td>
+        <td><a href="http://m.baidu.com/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.51t.com/ting/0a7b19a9/6118042b/&xdebug=1" target="_blank">自定义标注</a></td>
+        <td><a href="http://m.baidu.com/l=3/tc?srd=1&dict=20&nocache=1&src=http://www.51t.com/ting/0a7b19a9/6118042b/&tc_source=1" target="_blank">自定义标注</a></td>
+    </tr>
+
+    <tr>
+    <td></td>
+    <td><a href="http://10.46.192.34:8501/from=1000925h/bd_page_type=1/ssid=0/uid=A359182A899D489E04FEF2176618FA59/pu=usm%400%2Csz%401320_1001%2Cta%40utouch_2_2.3_3_/w=0_10_17%E5%B2%81%E6%80%AA%E7%97%85%E5%A5%B3%E5%AD%A9%E5%AD%98%E7%94%B7%E6%80%A7%E5%8C%96%E7%89%B9%E5%BE%81/t=wap/l=3/tc?baiduid=4A4300ADF78A3F6255DCDF42B2ECABAF&srd=1&dict=20&src=http%3A%2F%2Fnews.xinhuanet.com%2Fhealth%2F2013-03%2F22%2Fc_124477014.htm%3Fprolongation%3D1" target="_blank">线下</a></td>
+    <td><a href="http://10.46.192.34:8501/from=1000925h/bd_page_type=1/ssid=0/uid=A359182A899D489E04FEF2176618FA59/pu=usm%400%2Csz%401320_1001%2Cta%40utouch_2_2.3_3_/w=0_10_17%E5%B2%81%E6%80%AA%E7%97%85%E5%A5%B3%E5%AD%A9%E5%AD%98%E7%94%B7%E6%80%A7%E5%8C%96%E7%89%B9%E5%BE%81/t=wap/l=3/tc?baiduid=4A4300ADF78A3F6255DCDF42B2ECABAF&srd=1&dict=20&src=http%3A%2F%2Fnews.xinhuanet.com%2Fhealth%2F2013-03%2F22%2Fc_124477014.htm%3Fprolongation%3D1&xdebug=1" target="_blank">线下xdebug</a></td>
+    <td><a href="http://10.46.192.34:8501/from=1000925h/bd_page_type=1/ssid=0/uid=A359182A899D489E04FEF2176618FA59/pu=usm%400%2Csz%401320_1001%2Cta%40utouch_2_2.3_3_/w=0_10_17%E5%B2%81%E6%80%AA%E7%97%85%E5%A5%B3%E5%AD%A9%E5%AD%98%E7%94%B7%E6%80%A7%E5%8C%96%E7%89%B9%E5%BE%81/t=wap/l=3/tc?baiduid=4A4300ADF78A3F6255DCDF42B2ECABAF&srd=1&dict=20&src=http%3A%2F%2Fnews.xinhuanet.com%2Fhealth%2F2013-03%2F22%2Fc_124477014.htm%3Fprolongation%3D1&tc_source=1" target="_blank">线下</a></td>
+    <td><a href="http://m.baidu.com/from=1000925h/bd_page_type=1/ssid=0/uid=A359182A899D489E04FEF2176618FA59/pu=usm%400%2Csz%401320_1001%2Cta%40utouch_2_2.3_3_/w=0_10_17%E5%B2%81%E6%80%AA%E7%97%85%E5%A5%B3%E5%AD%A9%E5%AD%98%E7%94%B7%E6%80%A7%E5%8C%96%E7%89%B9%E5%BE%81/t=wap/l=3/tc?baiduid=4A4300ADF78A3F6255DCDF42B2ECABAF&srd=1&dict=20&src=http%3A%2F%2Fnews.xinhuanet.com%2Fhealth%2F2013-03%2F22%2Fc_124477014.htm%3Fprolongation%3D1" target="_blank">union</a></td>
+    <td><a href="http://m.baidu.com/from=1000925h/bd_page_type=1/ssid=0/uid=A359182A899D489E04FEF2176618FA59/pu=usm%400%2Csz%401320_1001%2Cta%40utouch_2_2.3_3_/w=0_10_17%E5%B2%81%E6%80%AA%E7%97%85%E5%A5%B3%E5%AD%A9%E5%AD%98%E7%94%B7%E6%80%A7%E5%8C%96%E7%89%B9%E5%BE%81/t=wap/l=3/tc?baiduid=4A4300ADF78A3F6255DCDF42B2ECABAF&srd=1&dict=20&src=http%3A%2F%2Fnews.xinhuanet.com%2Fhealth%2F2013-03%2F22%2Fc_124477014.htm%3Fprolongation%3D1&xdebug=1" target="_blank">xdebug</a></td>
+    <td><a href="" target="_blank"></a></td>
+
+    <tr>
+        <td></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fnovel.feiku.com" target="_blank">线下include item</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fnovel.feiku.com&xdebug=1" target="_blank">线下xdebug</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fnovel.feiku.com&tc_source=1" target="_blank">线下</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fnovel.feiku.com" target="_blank">union</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fnovel.feiku.com&xdebug=1" target="_blank">xdebug</a></td>
+        <td><a href="" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fwww.saimeier.com%2F" target="_blank">nav sub</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fwww.saimeier.com%2F&xdebug=1" target="_blank">线下xdebug</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fwww.saimeier.com%2F&tc_source=1" target="_blank">线下</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fwww.saimeier.com%2F" target="_blank">nav sub</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fwww.saimeier.com%2F&xdebug=1" target="_blank">xdebug</a></td>
+        <td><a href="" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjd.com%2F" target="_blank">topsearch1</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjd.com%2F&xdebug=1" target="_blank">线下xdebug</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjd.com%2F&tc_source=1" target="_blank">线下</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjd.com%2F" target="_blank">topsearch1</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjd.com%2F&xdebug=1" target="_blank">xdebug</a></td>
+        <td><a href="" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http://jiaoliu.readnovel.com/forum-34-1.html" target="_blank">bbslist</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http://jiaoliu.readnovel.com/forum-34-1.html&xdebug=1" target="_blank">线下xdebug</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http://jiaoliu.readnovel.com/forum-34-1.html&tc_source=1" target="_blank">线下</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http://jiaoliu.readnovel.com/forum-34-1.html" target="_blank">bbslist</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http://jiaoliu.readnovel.com/forum-34-1.html&xdebug=1" target="_blank">xdebug</a></td>
+        <td><a href="" target="_blank"></a></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjiaoliu.readnovel.com%2Fthread-710163-1-1.html" target="_blank">bbscontent</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjiaoliu.readnovel.com%2Fthread-710163-1-1.html&xdebug=1" target="_blank">线下xdebug</a></td>
+        <td><a href="http://10.46.192.34:8501/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjiaoliu.readnovel.com%2Fthread-710163-1-1.html&tc_source=1" target="_blank">线下</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjiaoliu.readnovel.com%2Fthread-710163-1-1.html" target="_blank">bbscontent</a></td>
+        <td><a href="http://m.baidu.com/from=844b/bd_page_type=1/ssid=0/uid=CB5B97A920B24F4380DDFE9BA8B2B882/pu=sz%401320_1001%2Cta%40iphone_2_2.3_3_533%2Cusm%404/w=0_10_电子书/t=iphone/l=3/tc?srd=1&dict=21&ua=1&src=http%3A%2F%2Fjiaoliu.readnovel.com%2Fthread-710163-1-1.html&xdebug=1" target="_blank">xdebug</a></td>
+        <td><a href="" target="_blank"></a></td>
+    </tr>
+</tr>
+
+</table>
+</body>
+</html>
+

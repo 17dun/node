@@ -1,0 +1,35 @@
+{namespace tpl.list}
+/**
+ * 短链接模板
+ * @param sub_data
+ * @param query_src
+ */
+{template .list}
+    <div class="ssListContainer">
+    {if isNonnull($sub_data['data_value']['items'])}
+        <ul class="yi-list-ul yi-listdata hList {if $sub_data['style_type'] == 'HORIZONTAL'}ssListH{/if}">
+        {foreach $sub_item in $sub_data['data_value']['items']}
+            <li class="yi-list-li hListItem {if isNonnull($sub_item['isNoDis'])} noDis {/if}{if $sub_data['style_type'] == 'HORIZONTAL'}hBoxV{else}hBoxH{/if}" data-type="img-text-list">
+            {if isNonnull($sub_item['isNoDis'])}
+                {call tpl.process}
+                    {param isHide:true /}
+                    {param item:$sub_item/}
+                    {param query_src:$query_src/}
+                    {param parenttype:$sub_data['data_value'].type /}
+                {/call}
+            {else}
+                {call tpl.process}
+                    {param item:$sub_item/}
+                    {param query_src:$query_src/}
+                    {param parenttype:$sub_data['data_value'].type /}
+                {/call}
+            {/if}
+            </li>
+        {/foreach}
+        </ul>
+    {/if}
+        {if $sub_data['data_value']['items'].length > $sub_data['data_value']['showCount']+4 and $sub_data['data_value']['showCount'] >0 and ($sub_data['data_value']['items'][length($sub_data['data_value']['items'])-1]['isNoDis'])}
+           <div class="hShowMoreItem tap" data-action="showMoreListItem" {if $sub_data['data_value']['showConfig'] }data-showConfig="{$sub_data['data_value']['showConfig']}"{/if}><span>点击加载更多</span></div>
+        {/if}
+    </div>
+{/template}
