@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" ><!-- match_parent:继承父级控件的宽高 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview"
+        android:text="@string/hello_world" /><!-- 标示去res下values文件夹下  string.xml文件里找   helow_world  这个变量标示的值 -->
+	<ListView 
+	    android:layout_width="match_parent"
+	    android:divider="#b8b8b8"
+	    android:dividerHeight="1dp"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/textview"
+	    android:id="@+id/listView"
+	    /><!-- layout_below:排在上面TextView的下面，如果不写，会与上面重叠排列 -->
+</RelativeLayout>
